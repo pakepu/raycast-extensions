@@ -4,6 +4,7 @@ import {
   Form,
   closeMainWindow,
   getPreferenceValues,
+  popToRoot,
   showToast,
 } from "@raycast/api";
 import fetch from "node-fetch";
@@ -37,21 +38,12 @@ export default function Command() {
         ],
       }),
     });
-    // const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-    // client.login(process.env.DISCORD_TOKEN);
-    //
-    // client.once(Events.ClientReady, async (c) => {
-    //   const channel = c.channels.cache.get("id");
-    //   if (!channel) throw new Error("Channell not found!");
-    //   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-    //   // @ts-ignore
-    //   channel.send(values.log);
-    // });
 
     await showToast({
       title: "Notes written",
       message: "Simple Discord Note",
     });
+    await popToRoot({ clearSearchBar: true });
     await closeMainWindow({ clearRootSearch: true });
   }
 
