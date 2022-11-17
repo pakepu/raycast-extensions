@@ -1,0 +1,17 @@
+{
+  "name": "@pakepu/raycast-extensions",
+  "license": "MIT",
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged --allow-empty"
+  },
+  "lint-staged": {
+    "*.{md,json,yml,yaml,html,css,js,ts,jsx,tsx}": "prettier --write"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^3.4.0",
+    "lint-staged": "^13.0.3",
+    "prettier": "^2.7.1",
+    "prettier-plugin-md-nocjsp": "^1.4.0",
+    "simple-git-hooks": "^2.8.1"
+  }
+}

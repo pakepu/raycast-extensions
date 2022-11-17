@@ -1,0 +1,50 @@
+{
+  "$schema": "https://www.raycast.com/schemas/extension.json",
+  "name": "simple-discord-note",
+  "title": "Simple Discord Note",
+  "description": "Send text to your Discord channel using webhook.",
+  "icon": "command-icon.png",
+  "author": "convcha",
+  "owner": "pakepu",
+  "categories": [
+    "Productivity"
+  ],
+  "license": "MIT",
+  "preferences": [
+    {
+      "name": "webhookUrl",
+      "description": "Discord Webhook URL",
+      "type": "textfield",
+      "required": true,
+      "title": "Discord Webhook URL"
+    }
+  ],
+  "commands": [
+    {
+      "name": "index",
+      "title": "Write Note",
+      "description": "Send text to your Discord channel",
+      "mode": "view"
+    }
+  ],
+  "dependencies": {
+    "@raycast/api": "^1.43.2",
+    "node-fetch": "^3.3.0"
+  },
+  "devDependencies": {
+    "@types/node": "18.8.3",
+    "@types/react": "18.0.9",
+    "@typescript-eslint/eslint-plugin": "^5.43.0",
+    "@typescript-eslint/parser": "^5.43.0",
+    "eslint": "^8.27.0",
+    "eslint-config-prettier": "^8.5.0",
+    "typescript": "^4.9.3"
+  },
+  "scripts": {
+    "build": "ray build -e dist",
+    "dev": "ray develop",
+    "fix-lint": "ray lint --fix",
+    "lint": "ray lint",
+    "publish": "ray publish"
+  }
+}
