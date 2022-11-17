@@ -2,8 +2,8 @@ import {
   Action,
   ActionPanel,
   Form,
+  closeMainWindow,
   getPreferenceValues,
-  popToRoot,
   showToast,
 } from "@raycast/api";
 import fetch from "node-fetch";
@@ -52,7 +52,7 @@ export default function Command() {
       title: "Notes written",
       message: "Simple Discord Note",
     });
-    await popToRoot({ clearSearchBar: true });
+    await closeMainWindow({ clearRootSearch: true });
   }
 
   return (
